@@ -1,0 +1,20 @@
+@import 'vars.scss';
+
+.title {
+    @include ButtonFont;
+    font-size: 3em;
+    display: flex;
+    justify-content: center;
+
+    text-shadow: 1px 1px 2px rgb(255, 128, 0), 0 0 1em rgb(245, 159, 0), 0 0 0.2em rgb(161, 91, 0);
+}
+
+.nofound {
+    @include ButtonFont;
+    font-size: 5em;
+    display: flex;
+    justify-content: center;
+    margin-top: 20vh;
+
+    text-shadow: 1px 1px 2px rgb(255, 128, 0), 0 0 1em rgb(245, 159, 0), 0 0 0.2em rgb(161, 91, 0);
+}

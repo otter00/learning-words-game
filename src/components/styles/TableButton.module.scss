@@ -1,0 +1,63 @@
+@import 'vars.scss';
+
+.buttonSave {
+    background-color: greenyellow;
+    @include ButtonFont;
+    color: black;
+}
+
+.buttonEdit {
+    background-color: rgb(255, 155, 54);
+    @include ButtonFont;
+}
+
+.buttonDelete {
+    background-color: rgba(146, 15, 146, 0.696);
+    @include ButtonFont;
+}
+
+.buttonAdd {
+    background-color: rgb(249, 193, 41);
+    @include ButtonFont;
+}
+
+.buttonCansel {
+    background-color: red;
+    @include ButtonFont;
+}
+
+.buttonTranslate {
+    @include BthRoundRadius;
+    margin-top: 5px;
+
+    &:hover {
+        @include HoverTranslateShadow;
+        cursor: pointer;
+    }
+
+    &:focus {
+        @include HoverTranslateShadow;
+        cursor: pointer;
+    }
+}
+
+.generalButton {
+    border: none;
+    @include BthRoundRadius;
+    width: 7em;
+    height: 3em;
+
+    &:hover {
+        @include HoverShadow;
+        cursor: pointer;
+    }
+}
+
+.generalButton__disabled {
+    background-color: rgb(161, 161, 161);
+    @include ButtonFont__Disabled;
+    border: none;
+    @include BthRoundRadius;
+    width: 7em;
+    height: 3em;
+}

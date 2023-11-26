@@ -1,0 +1,30 @@
+@import 'vars.scss';
+
+.button {
+    @include FlexCenter;
+    align-items: center;
+    background-color: rgba(255, 123, 0, 1);
+    border: none;
+
+    @include BthRoundRadius;
+    @include FontStyleBold;
+    color: white;
+    text-transform: uppercase;
+
+    margin: auto;
+    width: 9em;
+    height: 3em;
+
+    &:hover {
+        @include HoverShadow;
+    }
+
+    &:focus {
+        @include HoverShadow;
+    }
+}
+
+.buttons__container {
+    display: flex;
+    justify-content: space-evenly;
+}

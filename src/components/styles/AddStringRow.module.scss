@@ -1,0 +1,51 @@
+@import 'vars.scss';
+
+.title {
+    @include ButtonFont;
+    @include FlexCenter;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+.table {
+    margin: 2vh 5vw 2vh;
+
+    th,
+    tr,
+    td {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background-color: rgba(255, 123, 0, 0.5);
+    }
+
+    tr:hover {
+        background-color: antiquewhite;
+        cursor: pointer;
+    }
+
+    input {
+        background-color: rgba(255, 123, 0, 0.5);
+        margin-left: 7px;
+        padding: 8px;
+        border-radius: 15px;
+
+        @include ButtonFont;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.thead {
+
+    th {
+        color: $main-color;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include FontStyleBold;
+    }
+}
+
+.add__container {
+    padding: 0 4vw;
+}

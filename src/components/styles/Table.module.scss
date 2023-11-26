@@ -1,0 +1,87 @@
+@import 'vars.scss';
+
+.table {
+    margin: 2vh 5vw 10vh;
+
+    tr,
+    .add__input {
+        color: white;
+        text-transform: uppercase;
+        @include FontStyleBold;
+    }
+
+    .word__add {
+        margin: 1vh 0;
+    }
+
+    .add__input {
+        margin: 1vh;
+    }
+
+    th {
+        color: black;
+        font-size: 20px;
+        text-transform: uppercase;
+        @include FontStyleBold;
+    }
+
+    th,
+    tr,
+    td {
+        padding: 10px;
+        border: 1px solid black;
+        border-radius: 25px;
+        background-color: rgba(255, 123, 0, 0.5);
+    }
+
+    .save__row {
+        height: fit-content;
+        margin-top: 5vh;
+        width: 10vw;
+        display: flex;
+        justify-content: center;
+    }
+
+    tr:hover {
+        background-color: antiquewhite;
+        cursor: pointer;
+    }
+
+    input {
+        background-color: rgba(255, 123, 0, 0.5);
+        margin-left: 7px;
+        padding: 8px;
+        border-radius: 15px;
+
+        @include ButtonFont;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.word__new {
+    margin: 2vh 0vw 2vh;
+}
+
+.word__new__button {
+    margin: 7.5vh 5vh;
+}
+
+.center__flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.thead {
+    &:hover>tr {
+        background-color: rgb(237, 189, 189);
+    }
+}
+
+.empty_input {
+    border: 3px solid rgb(255, 238, 0);
+}
+
+.add__body {
+    display: flex;
+}

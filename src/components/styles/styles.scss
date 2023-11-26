@@ -1,0 +1,53 @@
+@import 'vars.scss';
+
+.cards__container {
+    margin: auto;
+
+    .card__content {
+        margin: 5vh 0 5vh 0;
+    }
+
+    .card__word {
+        border: 1px solid rgb(153, 153, 153);
+        border-radius: 65px;
+        background-color: beige;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        width: 350px;
+        height: 450px;
+
+        padding-top: 5%;
+
+        .card__topic,
+        .card__level,
+        .bold__word,
+        .word__translation,
+        .word__translation-button {
+            @include FlexCenter;
+        }
+
+        .card__topic,
+        .card__level {
+            font-size: 20px;
+        }
+
+        .bold__word {
+            font-size: 24px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+
+        .word__translation {
+            font-size: 24px;
+            font-style: italic;
+            font-weight: 700;
+            color: rgb(228, 118, 0);
+        }
+
+        &:hover {
+            @include HoverShadow;
+        }
+    }
+}

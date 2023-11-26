@@ -1,0 +1,55 @@
+@import 'vars.scss';
+
+li {
+    list-style: none;
+    text-transform: uppercase;
+    @include ButtonFont;
+
+    &:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+}
+
+.home__link {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: $main-color;
+    text-decoration: none;
+
+    &:visited {
+        text-decoration: underline;
+        color: $main-color;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.header__container {
+    height: 11vh;
+    background-color: rgba(255, 123, 0, 0.5);
+
+    .header__list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        .header__item {
+            color: white;
+        }
+
+        img {
+            width: 60%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

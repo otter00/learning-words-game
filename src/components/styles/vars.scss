@@ -1,0 +1,39 @@
+@mixin ButtonFont {
+    color: $main-color;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+@mixin ButtonFont__Disabled {
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@mixin BthRoundRadius {
+    border-radius: 20px;
+}
+
+@mixin FlexCenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin HoverShadow {
+    box-shadow: 2px 2px 2px rgb(244, 244, 244);
+    transition: 200ms;
+}
+
+@mixin HoverTranslateShadow {
+    box-shadow: 0 10px 15px -5px rgba(235, 90, 18, 0.789),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transition: 200ms;
+}
+
+@mixin FontStyleBold {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+$main-color: #FFF;
