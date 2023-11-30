@@ -1,14 +1,14 @@
 import React from "react";
-import "./App.scss";
+import "./components/styles/App.scss";
 import "./components/styles/styles.scss";
-import Table from "./components/styles/Table.module.scss";
-import HomePageStyles from "./components/styles/HomePage.module.scss";
+import Table from "./components/TemplateTable/Table.module.scss";
+import HomePageStyles from "./components/HomePage/HomePage.module.scss";
 // import components
-import CardSlider from "./components/CardSlider";
-import Header from "./components/Header";
-import TableWords from "./components/TableWords";
-import Home from "./components/Home";
-import AddStringRow from "./components/AddStringRow";
+import CardSlider from "./components/CardSlider/CardSlider";
+import Header from "./components/Header/Header";
+import TableWords from "./components/TableWordsList/TableWords";
+import Home from "./components/HomePage/Home";
+import AddStringRow from "./components/AddStringRow/AddStringRow";
 
 import { ContextProvider } from "./context/ContextProvider";
 

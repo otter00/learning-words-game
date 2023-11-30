@@ -1,8 +1,8 @@
-import Template from "./TemplateTable";
+import Template from "../TemplateTable/TemplateTable";
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import axios from "axios";
-import { wordsAPI } from "../utils/words_data";
+import { wordsAPI } from "../../utils/words_data";
 
 const Loading = styled.div`
   color: white;
@@ -14,7 +14,6 @@ const Loading = styled.div`
 `;
 
 export default function TableWords() {
-
   const [words, setWords] = useState([]);
 
   useEffect(() => {

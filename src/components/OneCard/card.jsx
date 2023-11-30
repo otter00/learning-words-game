@@ -1,12 +1,12 @@
 import React, { useEffect, useState, useContext, forwardRef } from "react";
 import cn from "classnames";
-import "./styles/styles.scss";
+import "../styles/styles.scss";
 
-import ButtonStyle from "./styles/Button.module.scss";
-import Button from "./Button";
-import TableButton from "./styles/TableButton.module.scss";
+import ButtonStyle from "../CustomButton/Button.module.scss";
+import Button from "../CustomButton/Button";
+import TableButton from "../CustomButton/TableButton.module.scss";
 
-import { WordsContext } from "../context/ContextProvider";
+import { WordsContext } from "../../context/ContextProvider";
 
 const buttonTranslate = cn([
   `${TableButton.buttonTranslate}`,

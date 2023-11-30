@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import Button from "./Button";
-import TableAppearance from "./styles/Table.module.scss";
-import TableButton from "./styles/TableButton.module.scss";
+import Button from "../CustomButton/Button";
+import TableAppearance from "./Table.module.scss";
+import TableButton from "../CustomButton/TableButton.module.scss";
 import cn from "classnames";
-import { wordsAPI } from "../utils/words_data";
+import { wordsAPI } from "../../utils/words_data";
 import axios from "axios";
 
 let buttonEdit = cn([

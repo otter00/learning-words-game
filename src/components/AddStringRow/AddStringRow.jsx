@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import "./styles/styles.scss";
+import "../styles/styles.scss";
 import styled from "styled-components";
-import AddStringRow from "./styles/AddStringRow.module.scss";
-import TableButton from "./styles/TableButton.module.scss";
+import AddStringRow from "./AddStringRow.module.scss";
+import TableButton from "../CustomButton/TableButton.module.scss";
 import cn from "classnames";
-import Button from "./Button";
+import Button from "../CustomButton/Button";
 import axios from "axios";
-import { wordsAPI } from "../utils/words_data";
+import { wordsAPI } from "../../utils/words_data";
 
 const RowDiv = styled.div`
   margin: auto;
