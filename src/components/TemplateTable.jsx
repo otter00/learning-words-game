@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Button from "./Button";
-//import { WordsContext } from "../context/ContextProvider";
 import TableAppearance from "./styles/Table.module.scss";
 import TableButton from "./styles/TableButton.module.scss";
 import cn from "classnames";
@@ -183,8 +182,7 @@ export default function Template(props) {
     setIsEmpty(false);
   };
 
-  // handleDeleteWord вызывает функцию deleteWord с двумя аргументами: id и wordToDelete.
-  //id - id удаляемого слова
+  // handleDeleteWord вызывает функцию deleteWord
   // wordToDelete - объект со свойствами english, transcription, russian, tags
   const handleDeleteWord = () => {
     const wordToDelete = {

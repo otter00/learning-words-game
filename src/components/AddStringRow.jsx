@@ -1,12 +1,10 @@
 import React, { useState } from "react";
-//import { useContext } from "react";
 import "./styles/styles.scss";
 import styled from "styled-components";
 import AddStringRow from "./styles/AddStringRow.module.scss";
 import TableButton from "./styles/TableButton.module.scss";
 import cn from "classnames";
 import Button from "./Button";
-// import { WordsContext } from "../context/ContextProvider";
 import axios from "axios";
 import { wordsAPI } from "../utils/words_data";
 
@@ -28,14 +26,6 @@ export default function StringRow() {
   });
   const [response, setResponse] = useState("");
 
-  // const [lvl, setLevel] = useState("lvl"); //initialize the state
-  // const [en, setEnglish] = useState("en");
-  // const [tr, setTranscription] = useState("tr");
-  // const [ru, setRussian] = useState("ru");
-
-  //let { id } = props;
-  //const { addWord } = useContext(WordsContext); //call for function from context
-
   const handleChange = (event) => {
     setData({ ...data, [event.target.name]: event.target.value });
   };
@@ -46,18 +36,6 @@ export default function StringRow() {
     // console.log('English:', en);
     // console.log('Transcription:', tr);
     // console.log('Russian:', ru);
-    //create an object contains input values
-    //then call for func and send it an object to add new word into API
-    // const newWord = {
-    //   tags: lvl,
-    //   english: en,
-    //   transcription: tr,
-    //   russian: ru,
-    // };
-    // console.log(newWord);
-    // addWord(id, newWord);
-
-    //event.preventDefault();
     axios
       .post(wordsAPI, data)
       .then((response) => {

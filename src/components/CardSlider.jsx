@@ -3,11 +3,8 @@ import './styles/styles.scss';
 // import components
 import Card from './card';
 import FinalCard from './EndOfCard';
-import JsonWords from "./CardWords";
-import SchoolJson from './SchoolJSON';
 import { WordsContext } from "../context/ContextProvider";
 
-//let words = JSON.parse(SchoolJson);
 
 const CardSlider = () => {
     const [cardIndex, setCardIndex] = useState(0);

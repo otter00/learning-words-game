@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import "./App.css";
+import React from "react";
+import "./App.scss";
 import "./components/styles/styles.scss";
 import Table from "./components/styles/Table.module.scss";
 import HomePageStyles from "./components/styles/HomePage.module.scss";
