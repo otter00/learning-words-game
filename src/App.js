@@ -1,6 +1,6 @@
 import React from "react";
-import "./components/styles/App.scss";
-import "./components/styles/styles.scss";
+import "./styles/App.scss";
+import "./styles/styles.scss";
 import Table from "./components/TemplateTable/Table.module.scss";
 import HomePageStyles from "./components/HomePage/HomePage.module.scss";
 // import components

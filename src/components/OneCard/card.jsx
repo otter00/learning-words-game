@@ -1,12 +1,10 @@
-import React, { useEffect, useState, useContext, forwardRef } from "react";
+import React, { useEffect, useState, forwardRef } from "react";
 import cn from "classnames";
-import "../styles/styles.scss";
+import "../../styles/styles.scss";
 
 import ButtonStyle from "../CustomButton/Button.module.scss";
 import Button from "../CustomButton/Button";
 import TableButton from "../CustomButton/TableButton.module.scss";
-
-import { WordsContext } from "../../context/ContextProvider";
 
 const buttonTranslate = cn([
   `${TableButton.buttonTranslate}`,
@@ -17,10 +15,6 @@ const Card = forwardRef(function Card(props, setButtonTranslateRef) {
   const [isTranslate, setIsTranslate] = useState(false);
   const { word, onClickTranslate } = props;
   const { tags, transcription, english, russian, id } = word;
-
-  const context = useContext(WordsContext);
-  const words = context.words;
-  console.log(words);
 
   const onClickButton = () => {
     onClickTranslate();

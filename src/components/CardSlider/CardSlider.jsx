@@ -1,19 +1,28 @@
-import React, { useState, useRef, useCallback, useContext } from "react";
-import "../styles/styles.scss";
+import React, { useState, useRef, useCallback, useEffect } from "react";
+import "../../styles/styles.scss";
 // import components
 import Card from "../OneCard/card";
 import FinalCard from "../EndOfCard/EndOfCard";
-import { WordsContext } from "../../context/ContextProvider";
+import axios from "axios";
+import { wordsAPI } from "../../utils/words_data";
 
 const CardSlider = () => {
   const [cardIndex, setCardIndex] = useState(0);
   const [idxWordsTranslated, setIdxWordsTranslated] = useState([]);
-
   const buttonTranslateRef = useRef(null);
+  const [cardWords, setWords] = useState([]);
 
-  const context = useContext(WordsContext);
-  const words = context.words;
-  console.log(words);
+  useEffect(() => {
+    axios
+      .get(wordsAPI)
+      .then((response) => {
+        setWords(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, []);
+  console.log(cardWords);
 
   const setButtonTranslateRef = useCallback((node) => {
     if (node) {
@@ -48,22 +57,22 @@ const CardSlider = () => {
 
   const countTranslated = idxWordsTranslated.length;
 
-  if (words) {
+  if (cardWords) {
     return (
       <>
-        {cardIndex < words.length && (
+        {cardIndex < cardWords.length && (
           <>
             <Card
               previousCard={previousCard}
               onClickTranslate={onClickTranslate}
-              word={words[cardIndex]}
+              word={cardWords[cardIndex]}
               nextCard={nextCard}
               ref={setButtonTranslateRef}
             />
-            {cardIndex + 1} / {words.length}
+            {cardIndex + 1} / {cardWords.length}
           </>
         )}
-        {cardIndex === words.length && (
+        {cardIndex === cardWords.length && (
           <>
             <FinalCard
               startSlider={startSlider}

@@ -1,6 +1,5 @@
 import React from "react";
-
-import "../styles/styles.scss";
+import "../../styles/styles.scss";
 import ButtonStyle from "../CustomButton/Button.module.scss";
 import Button from "../CustomButton/Button";
 

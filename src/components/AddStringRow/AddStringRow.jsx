@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/styles.scss";
+import "../../styles/styles.scss";
 import styled from "styled-components";
 import AddStringRow from "./AddStringRow.module.scss";
 import TableButton from "../CustomButton/TableButton.module.scss";

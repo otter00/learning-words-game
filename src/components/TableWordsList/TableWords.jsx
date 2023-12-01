@@ -34,14 +34,7 @@ export default function TableWords() {
       </>
     );
   }
-  console.log(words);
-
-  // here we use words got from context
-  // if (!words) {
-  //   return <Loading>Loading...</Loading>;
-  // } else if (words) {
-  //   console.log(words);
-  // }
+  //console.log(words);
 
   return (
     <>

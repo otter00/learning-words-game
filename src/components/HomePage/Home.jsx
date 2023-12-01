@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/styles.scss";
+import "../../styles/styles.scss";
 import styled from "styled-components";
 import HomePageStyles from "./HomePage.module.scss";
 

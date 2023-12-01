@@ -36,8 +36,6 @@ export default function Template(props) {
     transcription,
   }); // пропсы из TableWords
   const [isEmpty, setIsEmpty] = useState(null);
-  // const { deleteWord, editWord } = useContext(WordsContext); // call deleteWord from the context
-  // and set in into variable deleteWord
 
   // useEffect с зависимостями
   // при изменении любого из этих свойств в props эффект будет вызван
