@@ -16,6 +16,8 @@ const Card = forwardRef(function Card(props, setButtonTranslateRef) {
   const { word, onClickTranslate } = props;
   const { tags, transcription, english, russian, id } = word;
 
+  console.log("index is = " + props.cardIndex);
+
   const onClickButton = () => {
     onClickTranslate();
     setIsTranslate(!isTranslate);
@@ -57,13 +59,22 @@ const Card = forwardRef(function Card(props, setButtonTranslateRef) {
       </section>
 
       <div className={ButtonStyle.buttons__container}>
-        <div onClick={props.previousCard}>
-          <Button className={ButtonStyle.button} name={"Previous"} />
-        </div>
+        {props.cardIndex === 0 && (
+          <div onClick={props.nextCard}>
+            <Button className={ButtonStyle.button} name={"Next"} />
+          </div>
+        )}
+        {props.cardIndex > 0 && (
+          <>
+            <div onClick={props.previousCard}>
+              <Button className={ButtonStyle.button} name={"Previous"} />
+            </div>
 
-        <div onClick={props.nextCard}>
-          <Button className={ButtonStyle.button} name={"Next"} />
-        </div>
+            <div onClick={props.nextCard}>
+              <Button className={ButtonStyle.button} name={"Next"} />
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
