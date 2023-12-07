@@ -37,31 +37,6 @@ export default function Template(props) {
   }); // пропсы из TableWords
   const [isEmpty, setIsEmpty] = useState(null);
 
-  // useEffect с зависимостями
-  // при изменении любого из этих свойств в props эффект будет вызван
-  // useEffect(() => {
-  //   setWord({
-  //     id: props.id,
-  //     english: props.english,
-  //     transcription: props.transcription,
-  //     russian: props.russian,
-  //     tags: props.tags,
-  //   });
-  // }, [props.id, props.english, props.transcription, props.russian, props.tags]);
-
-  // const checkInput = () => {
-  //   if (
-  //     word.english === "" ||
-  //     word.russian === "" ||
-  //     word.tags === "" ||
-  //     word.transcription === ""
-  //   ) {
-  //     setIsEmpty(true);
-  //   } else {
-  //     setIsEmpty(false);
-  //   }
-  // };
-
   // useEffect(() => {
   //   console.log("mount");
   //   return () => {
