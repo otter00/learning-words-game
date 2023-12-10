@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/learning-words-game/static/css/main.6ef8de15.css",
-    "main.js": "/learning-words-game/static/js/main.15fc2f92.js",
+    "main.css": "/learning-words-game/static/css/main.e7c52fcf.css",
+    "main.js": "/learning-words-game/static/js/main.4939b83a.js",
     "static/js/787.99d3c8fd.chunk.js": "/learning-words-game/static/js/787.99d3c8fd.chunk.js",
     "static/media/AABKRHL.jpg": "/learning-words-game/static/media/AABKRHL.085707a8b61e470deb7d.jpg",
     "static/media/logo.png": "/learning-words-game/static/media/logo.3dc62d887fed073aa410.png",
     "index.html": "/learning-words-game/index.html",
-    "main.6ef8de15.css.map": "/learning-words-game/static/css/main.6ef8de15.css.map",
-    "main.15fc2f92.js.map": "/learning-words-game/static/js/main.15fc2f92.js.map",
+    "main.e7c52fcf.css.map": "/learning-words-game/static/css/main.e7c52fcf.css.map",
+    "main.4939b83a.js.map": "/learning-words-game/static/js/main.4939b83a.js.map",
     "787.99d3c8fd.chunk.js.map": "/learning-words-game/static/js/787.99d3c8fd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6ef8de15.css",
-    "static/js/main.15fc2f92.js"
+    "static/css/main.e7c52fcf.css",
+    "static/js/main.4939b83a.js"
   ]
 }
