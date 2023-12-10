@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/learning-words-game/static/css/main.6ef8de15.css",
-    "main.js": "/learning-words-game/static/js/main.565f9ddb.js",
+    "main.js": "/learning-words-game/static/js/main.15fc2f92.js",
     "static/js/787.99d3c8fd.chunk.js": "/learning-words-game/static/js/787.99d3c8fd.chunk.js",
     "static/media/AABKRHL.jpg": "/learning-words-game/static/media/AABKRHL.085707a8b61e470deb7d.jpg",
     "static/media/logo.png": "/learning-words-game/static/media/logo.3dc62d887fed073aa410.png",
     "index.html": "/learning-words-game/index.html",
     "main.6ef8de15.css.map": "/learning-words-game/static/css/main.6ef8de15.css.map",
-    "main.565f9ddb.js.map": "/learning-words-game/static/js/main.565f9ddb.js.map",
+    "main.15fc2f92.js.map": "/learning-words-game/static/js/main.15fc2f92.js.map",
     "787.99d3c8fd.chunk.js.map": "/learning-words-game/static/js/787.99d3c8fd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6ef8de15.css",
-    "static/js/main.565f9ddb.js"
+    "static/js/main.15fc2f92.js"
   ]
 }
