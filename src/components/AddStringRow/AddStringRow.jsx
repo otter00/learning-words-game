@@ -34,28 +34,6 @@ export default function StringRow() {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  // const handleCheck = () => {
-  //   if (
-  //     data.english.trim() === "" ||
-  //     data.russian.trim() === "" ||
-  //     data.tags.trim() === "" ||
-  //     data.transcription.trim() === ""
-  //   ) {
-  //     setIsEmpty(true);
-  //     alert(`Please fill all the inputs required`);
-  //     return;
-  //   } else if (!data.russian.match("[а-яА-ЯЁё]")) {
-  //     alert("Please enter a russian word");
-  //     return;
-  //   } else if (
-  //     !data.english.match("^[a-zA-Z0-9]+$") ||
-  //     !data.tags.match("^[a-zA-Z0-9]+$")
-  //   ) {
-  //     alert("Please enter an english word");
-  //     return;
-  //   }
-  // };
-
   useEffect(() => {
     if (
       data.english === "" ||
@@ -72,13 +50,13 @@ export default function StringRow() {
     }
   }, [data.english, data.russian, data.tags, data.transcription]);
 
-  const handleButtonAddClick = (event) => {
+  const handleButtonAddClick = () => {
     // Выводим введенные данные в консоль
     // console.log('Level:', lvl);
     // console.log('English:', en);
     // console.log('Transcription:', tr);
 
-    if (isEmpty) alert("Please, fill all the inputs required");
+    if (isEmpty) alert("Please, fill all the inputs match to pattern");
     else {
       axios
         .post(wordsAPI, data)
@@ -113,6 +91,7 @@ export default function StringRow() {
                 type="text"
                 name="tags"
                 value={data.tags}
+                placeholder="tags"
                 //initialize the state
                 onChange={handleChange}
               ></input>
@@ -122,6 +101,7 @@ export default function StringRow() {
               <input
                 type="text"
                 name="english"
+                placeholder="english"
                 value={data.english}
                 onChange={handleChange}
               ></input>
@@ -131,6 +111,7 @@ export default function StringRow() {
               <input
                 type="text"
                 name="transcription"
+                placeholder="[transcription]"
                 value={data.transcription}
                 onChange={handleChange}
               ></input>
@@ -140,6 +121,7 @@ export default function StringRow() {
               <input
                 type="text"
                 name="russian"
+                placeholder="перевод"
                 value={data.russian}
                 onChange={handleChange}
               ></input>
