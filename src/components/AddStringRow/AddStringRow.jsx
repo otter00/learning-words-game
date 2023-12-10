@@ -34,34 +34,37 @@ export default function StringRow() {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  const handleCheck = () => {
-    if (
-      data.english.trim() === "" ||
-      data.russian.trim() === "" ||
-      data.tags.trim() === "" ||
-      data.transcription.trim() === ""
-    ) {
-      setIsEmpty(true);
-      alert(`Please fill all the inputs required`);
-      return;
-    } else if (!data.russian.match("[а-яА-ЯЁё]")) {
-      alert("Please enter a russian word");
-      return;
-    } else if (
-      !data.english.match("^[a-zA-Z0-9]+$") ||
-      !data.tags.match("^[a-zA-Z0-9]+$")
-    ) {
-      alert("Please enter an english word");
-      return;
-    }
-  };
+  // const handleCheck = () => {
+  //   if (
+  //     data.english.trim() === "" ||
+  //     data.russian.trim() === "" ||
+  //     data.tags.trim() === "" ||
+  //     data.transcription.trim() === ""
+  //   ) {
+  //     setIsEmpty(true);
+  //     alert(`Please fill all the inputs required`);
+  //     return;
+  //   } else if (!data.russian.match("[а-яА-ЯЁё]")) {
+  //     alert("Please enter a russian word");
+  //     return;
+  //   } else if (
+  //     !data.english.match("^[a-zA-Z0-9]+$") ||
+  //     !data.tags.match("^[a-zA-Z0-9]+$")
+  //   ) {
+  //     alert("Please enter an english word");
+  //     return;
+  //   }
+  // };
 
   useEffect(() => {
     if (
       data.english === "" ||
       data.russian === "" ||
       data.tags === "" ||
-      data.transcription === ""
+      data.transcription === "" ||
+      !data.russian.match("[а-яА-ЯЁё]") ||
+      !data.english.match("^[a-zA-Z0-9]+$") ||
+      !data.tags.match("^[a-zA-Z0-9]+$")
     ) {
       setIsEmpty(true);
     } else {
@@ -75,15 +78,18 @@ export default function StringRow() {
     // console.log('English:', en);
     // console.log('Transcription:', tr);
 
-    axios
-      .post(wordsAPI, data)
-      .then((response) => {
-        setResponse(response.data);
-        window.location.reload();
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    if (isEmpty) alert("Please, fill all the inputs required");
+    else {
+      axios
+        .post(wordsAPI, data)
+        .then((response) => {
+          setResponse(response.data);
+          window.location.reload();
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   };
 
   return (

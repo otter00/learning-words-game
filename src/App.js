@@ -27,7 +27,7 @@ class App extends React.Component {
             <Routes>
               <Route path="/table" element={<TableWordsList />} />
               <Route path="/learn" element={<Learn />} />
-              <Route path="/" element={<HomePage />} />
+              <Route path="/learning-words-game" element={<HomePage />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>
